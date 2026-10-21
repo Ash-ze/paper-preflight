@@ -7,7 +7,7 @@
   "doubleBlind": true,
   "paperSize": "a4",
   "referencesCountTowardLimit": false,
-  "fonts": { "allowType3": true, "requireAllEmbedded": false },
+  "fonts": { "allowType3": true, "requireAllEmbedded": true },
   "cfpUrl": "https://aclrollingreview.org/cfp",
   "notes": "Also applies to EMNLP / NAACL submitted through ACL Rolling Review. Up to 8 content pages; the required limitations section, an optional ethics section and references go after the conclusion and do not count.",
   "sources": [
