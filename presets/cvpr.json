@@ -1,0 +1,15 @@
+{
+  "$schema": "./schema.json",
+  "id": "cvpr",
+  "name": "CVPR",
+  "edition": "2025",
+  "pageLimit": 8,
+  "doubleBlind": true,
+  "paperSize": "letter",
+  "referencesCountTowardLimit": false,
+  "fonts": { "allowType3": true, "requireAllEmbedded": false },
+  "cfpUrl": "https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines",
+  "notes": "8 pages excluding references. Supplementary material is a separate file.",
+  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
+  "lastChecked": null
+}

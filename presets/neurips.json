@@ -1,0 +1,15 @@
+{
+  "$schema": "./schema.json",
+  "id": "neurips",
+  "name": "NeurIPS",
+  "edition": "2025",
+  "pageLimit": 9,
+  "doubleBlind": true,
+  "paperSize": "letter",
+  "referencesCountTowardLimit": false,
+  "fonts": { "allowType3": true, "requireAllEmbedded": false },
+  "cfpUrl": "https://neurips.cc/Conferences/2025/CallForPapers",
+  "notes": "Main text limit; references, checklist and appendices are not counted.",
+  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
+  "lastChecked": null
+}

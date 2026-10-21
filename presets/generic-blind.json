@@ -1,0 +1,14 @@
+{
+  "$schema": "./schema.json",
+  "id": "generic-blind",
+  "name": "Generic double-blind (no page limit)",
+  "pageLimit": null,
+  "doubleBlind": true,
+  "paperSize": null,
+  "referencesCountTowardLimit": false,
+  "fonts": { "allowType3": true, "requireAllEmbedded": false },
+  "cfpUrl": "",
+  "notes": "Runs every check without venue-specific limits.",
+  "unverified": [],
+  "lastChecked": null
+}

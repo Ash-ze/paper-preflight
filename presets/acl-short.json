@@ -1,0 +1,15 @@
+{
+  "$schema": "./schema.json",
+  "id": "acl-short",
+  "name": "ACL / ARR (short paper)",
+  "edition": "ARR",
+  "pageLimit": 4,
+  "doubleBlind": true,
+  "paperSize": "a4",
+  "referencesCountTowardLimit": false,
+  "fonts": { "allowType3": true, "requireAllEmbedded": false },
+  "cfpUrl": "https://aclrollingreview.org/cfp",
+  "notes": "Also applies to EMNLP / NAACL submitted through ACL Rolling Review.",
+  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
+  "lastChecked": null
+}

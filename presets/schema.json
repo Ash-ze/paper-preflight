@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paper Preflight venue preset",
+  "type": "object",
+  "required": ["id", "name", "pageLimit", "doubleBlind", "paperSize", "referencesCountTowardLimit", "cfpUrl", "unverified"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$", "description": "Must equal the file name without .json" },
+    "name": { "type": "string", "minLength": 1 },
+    "edition": { "type": "string", "description": "Year or cycle the values were taken from" },
+    "pageLimit": { "type": ["integer", "null"], "minimum": 1, "description": "Main-body page limit; null = no limit" },
+    "doubleBlind": { "type": "boolean" },
+    "paperSize": { "enum": ["letter", "a4", null] },
+    "referencesCountTowardLimit": { "type": "boolean" },
+    "referencesPageLimit": { "type": ["integer", "null"], "minimum": 0, "description": "Extra pages allowed for references only" },
+    "fonts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "allowType3": { "type": "boolean" },
+        "requireAllEmbedded": { "type": "boolean", "description": "true = even Base-14 fonts must be embedded" }
+      }
+    },
+    "cfpUrl": { "type": "string", "description": "Official call for papers / author guidelines (https), or empty" },
+    "notes": { "type": "string" },
+    "unverified": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Field names whose values have NOT been checked against the official CFP"
+    },
+    "lastChecked": { "type": ["string", "null"], "description": "ISO date when a contributor last verified the values" }
+  }
+}
