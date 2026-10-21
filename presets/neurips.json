@@ -2,14 +2,18 @@
   "$schema": "./schema.json",
   "id": "neurips",
   "name": "NeurIPS",
-  "edition": "2025",
+  "edition": "2026",
   "pageLimit": 9,
   "doubleBlind": true,
   "paperSize": "letter",
   "referencesCountTowardLimit": false,
   "fonts": { "allowType3": true, "requireAllEmbedded": false },
-  "cfpUrl": "https://neurips.cc/Conferences/2025/CallForPapers",
-  "notes": "Main text limit; references, checklist and appendices are not counted.",
-  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
-  "lastChecked": null
+  "cfpUrl": "https://neurips.cc/Conferences/2026/CallForPapers",
+  "notes": "Main track: nine content pages including figures and tables; references, optional technical appendices and the mandatory checklist do not count. Accepted papers get one extra page.",
+  "sources": [
+    "https://neurips.cc/Conferences/2026/CallForPapers",
+    "https://neurips.cc/Conferences/2026/MainTrackHandbook"
+  ],
+  "unverified": ["paperSize", "fonts"],
+  "lastChecked": "2026-10-21"
 }

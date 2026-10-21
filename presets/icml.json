@@ -2,14 +2,18 @@
   "$schema": "./schema.json",
   "id": "icml",
   "name": "ICML",
-  "edition": "2025",
+  "edition": "2026",
   "pageLimit": 8,
   "doubleBlind": true,
   "paperSize": "letter",
   "referencesCountTowardLimit": false,
   "fonts": { "allowType3": false, "requireAllEmbedded": true },
-  "cfpUrl": "https://icml.cc/Conferences/2025/CallForPapers",
-  "notes": "Main body limit; references and appendix are unlimited. The style guide asks for Type-1 fonts only.",
-  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
-  "lastChecked": null
+  "cfpUrl": "https://icml.cc/Conferences/2026/CallForPapers",
+  "notes": "Main body limited to 8 pages; references, impact statement and appendices are unlimited and go in the same PDF. Accepted papers get one extra page. The style guide asks for Type-1 fonts only.",
+  "sources": [
+    "https://icml.cc/Conferences/2026/CallForPapers",
+    "https://icml.cc/Conferences/2026/AuthorInstructions"
+  ],
+  "unverified": ["fonts"],
+  "lastChecked": "2026-10-21"
 }

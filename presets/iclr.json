@@ -2,14 +2,18 @@
   "$schema": "./schema.json",
   "id": "iclr",
   "name": "ICLR",
-  "edition": "2025",
-  "pageLimit": 10,
+  "edition": "2027",
+  "pageLimit": 9,
   "doubleBlind": true,
   "paperSize": "letter",
   "referencesCountTowardLimit": false,
   "fonts": { "allowType3": true, "requireAllEmbedded": false },
-  "cfpUrl": "https://iclr.cc/Conferences/2025/CallForPapers",
-  "notes": "Strict limit on main text at submission time; references and appendix not counted. Check the current year's CFP: the limit has changed between editions.",
-  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
-  "lastChecked": null
+  "cfpUrl": "https://iclr.cc/Conferences/2027/AuthorGuidelines",
+  "notes": "Main text strictly limited to 9 pages at submission (10 pages during discussion and for the camera-ready). References, appendices, the optional ethics and reproducibility statements and the required LLM-use disclosure are not counted.",
+  "sources": [
+    "https://iclr.cc/Conferences/2027/AuthorGuidelines",
+    "https://iclr.cc/Conferences/2027/CallForPapers"
+  ],
+  "unverified": ["paperSize", "fonts"],
+  "lastChecked": "2026-10-21"
 }

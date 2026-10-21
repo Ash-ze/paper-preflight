@@ -2,15 +2,19 @@
   "$schema": "./schema.json",
   "id": "aaai",
   "name": "AAAI",
-  "edition": "2026",
+  "edition": "2027",
   "pageLimit": 7,
   "doubleBlind": true,
   "paperSize": "letter",
   "referencesCountTowardLimit": false,
   "referencesPageLimit": 2,
   "fonts": { "allowType3": false, "requireAllEmbedded": true },
-  "cfpUrl": "https://aaai.org/conference/aaai/",
-  "notes": "7 pages of technical content plus up to 2 pages of references. The author kit forbids Type 3 fonts and requires all fonts to be embedded.",
-  "unverified": ["pageLimit", "paperSize", "referencesPageLimit", "fonts", "cfpUrl"],
-  "lastChecked": null
+  "cfpUrl": "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
+  "notes": "Main technical track: 7 pages of content, maximum 9 pages in total; pages 8-9 are for references only. Any ethics statement must fit in the 7 content pages. PDF in US Letter with Type 1 or TrueType fonts.",
+  "sources": [
+    "https://aaai.org/conference/aaai/aaai-27/main-technical-track-call/",
+    "https://aaai.org/conference/aaai/aaai-27/submission-instructions/"
+  ],
+  "unverified": ["fonts"],
+  "lastChecked": "2026-10-21"
 }

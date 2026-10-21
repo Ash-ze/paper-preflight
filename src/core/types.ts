@@ -73,6 +73,8 @@ export interface Preset {
   };
   cfpUrl: string;
   notes?: string;
+  /** Official pages (https) the verified values were checked against. */
+  sources?: string[];
   /** Field names whose value has not been checked against the official CFP. */
   unverified: string[];
   lastChecked?: string | null;

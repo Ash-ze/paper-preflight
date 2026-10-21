@@ -14,6 +14,7 @@ synthetic PDF instead (see `scripts/make_fixtures.py` for examples).
 1. Add or edit `presets/<id>.json` (`id` must equal the file name, kebab-case). The format is described
    in the README and in `presets/schema.json`.
 2. Take values from the **official** call for papers or author kit and put that link in `cfpUrl`.
+   List every official page you used in `sources` (https URLs).
 3. If you confirmed every value, set `"unverified": []` and `"lastChecked": "YYYY-MM-DD"`.
    Otherwise list the fields you could not confirm in `unverified`. Never guess a number without
    listing it there.

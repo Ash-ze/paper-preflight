@@ -2,14 +2,19 @@
   "$schema": "./schema.json",
   "id": "acl-long",
   "name": "ACL / ARR (long paper)",
-  "edition": "ARR",
+  "edition": "Oct 2026 cycle",
   "pageLimit": 8,
   "doubleBlind": true,
   "paperSize": "a4",
   "referencesCountTowardLimit": false,
   "fonts": { "allowType3": true, "requireAllEmbedded": false },
   "cfpUrl": "https://aclrollingreview.org/cfp",
-  "notes": "Also applies to EMNLP / NAACL submitted through ACL Rolling Review. Limitations, ethics statement and references do not count.",
-  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
-  "lastChecked": null
+  "notes": "Also applies to EMNLP / NAACL submitted through ACL Rolling Review. Up to 8 content pages; the required limitations section, an optional ethics section and references go after the conclusion and do not count.",
+  "sources": [
+    "https://aclrollingreview.org/cfp",
+    "https://aclrollingreview.org/dates",
+    "https://acl-org.github.io/ACLPUB/formatting.html"
+  ],
+  "unverified": ["fonts"],
+  "lastChecked": "2026-10-21"
 }

@@ -2,14 +2,18 @@
   "$schema": "./schema.json",
   "id": "cvpr",
   "name": "CVPR",
-  "edition": "2025",
+  "edition": "2026",
   "pageLimit": 8,
   "doubleBlind": true,
   "paperSize": "letter",
   "referencesCountTowardLimit": false,
   "fonts": { "allowType3": true, "requireAllEmbedded": false },
-  "cfpUrl": "https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines",
-  "notes": "8 pages excluding references. Supplementary material is a separate file.",
-  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
-  "lastChecked": null
+  "cfpUrl": "https://cvpr.thecvf.com/Conferences/2026/AuthorGuidelines",
+  "notes": "8 pages including figures and tables; additional pages containing only cited references are allowed. Supplementary material is a separate file. Values are from the CVPR 2026 author guidelines: the CVPR 2027 call is out, but its author guidelines were not yet found.",
+  "sources": [
+    "https://cvpr.thecvf.com/Conferences/2026/AuthorGuidelines",
+    "https://cvpr.thecvf.com/Conferences/2027/CallForPapers"
+  ],
+  "unverified": ["paperSize", "fonts"],
+  "lastChecked": "2026-10-21"
 }

@@ -2,7 +2,7 @@ import type { Preset } from './types';
 
 const KNOWN = new Set([
   '$schema', 'id', 'name', 'edition', 'pageLimit', 'doubleBlind', 'paperSize', 'referencesCountTowardLimit',
-  'referencesPageLimit', 'fonts', 'cfpUrl', 'notes', 'unverified', 'lastChecked',
+  'referencesPageLimit', 'fonts', 'cfpUrl', 'notes', 'sources', 'unverified', 'lastChecked',
 ]);
 
 /** Validate a preset object (mirror of presets/schema.json). Returns a list of problems. */
@@ -28,6 +28,8 @@ export function validatePreset(p: any, fileId?: string): string[] {
       }
   }
   if (typeof p.cfpUrl !== 'string' || (p.cfpUrl && !/^https:\/\//.test(p.cfpUrl))) errs.push('cfpUrl must be an https URL or ""');
+  if (p.sources != null && (!Array.isArray(p.sources) || p.sources.some((x: unknown) => typeof x !== 'string' || !/^https:\/\//.test(x))))
+    errs.push('sources must be a list of https URLs');
   if (!Array.isArray(p.unverified) || p.unverified.some((x: unknown) => typeof x !== 'string' || !KNOWN.has(x as string)))
     errs.push('unverified must list existing field names');
   if (p.lastChecked != null && !/^\d{4}-\d{2}-\d{2}$/.test(p.lastChecked)) errs.push('lastChecked must be YYYY-MM-DD or null');

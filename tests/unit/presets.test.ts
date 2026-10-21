@@ -21,6 +21,7 @@ describe('presets/*.json', () => {
   it('validator rejects bad input', () => {
     expect(validatePreset({ id: 'X', pageLimit: 0 }).length).toBeGreaterThan(3);
     expect(validatePreset({ ...PRESETS[0], cfpUrl: 'http://insecure' })).toContain('cfpUrl must be an https URL or ""');
+    expect(validatePreset({ ...PRESETS[0], sources: ['http://insecure'] })).toContain('sources must be a list of https URLs');
     expect(validatePreset({ ...PRESETS[0], unverified: ['nope'] })).toContain('unverified must list existing field names');
   });
 });

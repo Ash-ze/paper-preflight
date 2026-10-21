@@ -24,6 +24,11 @@
     },
     "cfpUrl": { "type": "string", "description": "Official call for papers / author guidelines (https), or empty" },
     "notes": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^https://" },
+      "description": "Official pages (https) the verified values were checked against"
+    },
     "unverified": {
       "type": "array",
       "items": { "type": "string" },

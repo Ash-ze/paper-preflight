@@ -46,10 +46,11 @@ Presets live in [`presets/*.json`](presets/) and are picked up automatically at 
 Currently included: NeurIPS, ICLR, ICML, CVPR, ACL/ARR long, ACL/ARR short, AAAI, and a generic
 double-blind preset.
 
-> **Please verify.** The values were entered from memory of past calls for papers and have **not** been
-> checked against the official pages. Every such field is listed in the preset's `unverified` array and
-> shown in the UI. Limits change from year to year — always read the official CFP. Pull requests that
-> verify a preset (set `unverified: []` and `lastChecked`) are very welcome.
+> **Please verify.** The venue presets were checked against the official CFP / author guidelines of the
+> latest published edition on 2026-10-21 (`lastChecked`), with the pages used listed in `sources`. Fields
+> that could not be confirmed from an official page (mostly `fonts`, and `paperSize` for some venues) are
+> still listed in the preset's `unverified` array and shown in the UI. Limits change from year to year —
+> always read the official CFP. Pull requests that verify the remaining fields are very welcome.
 
 Example:
 
@@ -58,17 +59,20 @@ Example:
   "$schema": "./schema.json",
   "id": "neurips",
   "name": "NeurIPS",
-  "edition": "2025",
+  "edition": "2026",
   "pageLimit": 9,
   "doubleBlind": true,
   "paperSize": "letter",
   "referencesCountTowardLimit": false,
-  "referencesPageLimit": null,
   "fonts": { "allowType3": true, "requireAllEmbedded": false },
-  "cfpUrl": "https://neurips.cc/Conferences/2025/CallForPapers",
-  "notes": "Main text limit; references, checklist and appendices are not counted.",
-  "unverified": ["pageLimit", "paperSize", "referencesCountTowardLimit", "fonts", "cfpUrl"],
-  "lastChecked": null
+  "cfpUrl": "https://neurips.cc/Conferences/2026/CallForPapers",
+  "notes": "Main track: nine content pages including figures and tables; references, optional technical appendices and the mandatory checklist do not count. Accepted papers get one extra page.",
+  "sources": [
+    "https://neurips.cc/Conferences/2026/CallForPapers",
+    "https://neurips.cc/Conferences/2026/MainTrackHandbook"
+  ],
+  "unverified": ["paperSize", "fonts"],
+  "lastChecked": "2026-10-21"
 }
 ```
 
@@ -83,6 +87,7 @@ Example:
 | `fonts.allowType3` | `false` turns Type 3 warnings into failures |
 | `fonts.requireAllEmbedded` | `true` turns non-embedded Base-14 warnings into failures |
 | `cfpUrl` | official CFP / author guidelines (https) |
+| `sources` | optional list of official pages (https) the values were checked against |
 | `unverified` | names of fields not yet checked against the official source |
 | `lastChecked` | `YYYY-MM-DD` when someone verified the values |
 
@@ -90,7 +95,8 @@ Example:
 
 1. Copy an existing file to `presets/<venue>.json` and edit it. The JSON schema is in
    [`presets/schema.json`](presets/schema.json); editors such as VS Code validate it automatically.
-2. Fill `cfpUrl` with the official page and list any field you could not confirm in `unverified`.
+2. Fill `cfpUrl` with the official page, list the pages you checked in `sources`, and list any field you
+   could not confirm in `unverified`.
 3. Run `npm test` — `tests/unit/presets.test.ts` validates every preset.
 4. Open a pull request. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -137,7 +143,7 @@ Deployment: see [DEPLOY.md](DEPLOY.md) (GitHub Pages via Actions, or Cloudflare 
   flagging citations and dataset names.
 - **Image resolution** covers image XObjects and inline images; images inside patterns or shadings are
   not measured.
-- **Presets** are unverified (see above).
+- **Presets** are only partly verified; remaining fields are listed in `unverified` (see above).
 
 ## License
 
@@ -159,8 +165,8 @@ Deployment: see [DEPLOY.md](DEPLOY.md) (GitHub Pages via Actions, or Cloudflare 
 4. **未解析引用**：正文中的 `??` 和 `[?]`。
 5. **纸张尺寸**（Letter / A4）和**低分辨率位图**。
 
-**会议预设**放在 `presets/*.json`，新增一个会议只需要加一个 JSON 文件并提 PR。**注意：现有预设的数值来自过往 CFP 的记忆，尚未逐一核对官方页面，所有未核实字段都列在 `unverified` 中并在界面上提示，欢迎社区核对后提交 PR。**
+**会议预设**放在 `presets/*.json`，新增一个会议只需要加一个 JSON 文件并提 PR。**注意：现有预设已于 2026-10-21 对照各会议最新一届的官方 CFP / 作者指南核对（`lastChecked`），所依据的页面列在 `sources` 中；无法从官方页面确认的字段（主要是 `fonts`，部分会议的 `paperSize`）仍列在 `unverified` 中并在界面上提示，欢迎社区核对后提交 PR。**
 
 **本地开发**：`npm install`，`npm run dev`；测试 `npm test`；构建 `npm run build`；端到端测试 `npm run test:e2e`。
 
-**局限**：所有检查都是启发式的，报告"通过"不代表一定合规；双栏排版按行合并文本；字体检查只覆盖页面内容实际使用的字体；页数统计依赖 References 标题；预设数值未经核实。投稿前请务必阅读会议官方要求。
+**局限**：所有检查都是启发式的，报告"通过"不代表一定合规；双栏排版按行合并文本；字体检查只覆盖页面内容实际使用的字体；页数统计依赖 References 标题；预设中仍有部分字段未经核实。投稿前请务必阅读会议官方要求。
